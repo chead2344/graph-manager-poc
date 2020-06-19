@@ -3,7 +3,7 @@ require("dotenv").config();
 import { ApolloServer, gql } from "apollo-server";
 import { buildFederatedSchema } from "@apollo/federation";
 
-const REVIEWS = [
+const ALL_REVIEWS = [
   { id: "900", productId: "1", message: "It's great!" },
   { id: "901", productId: "1", message: "The fans are really loud." },
   { id: "902", productId: "2", message: "Not as good as my Playstation 4" },
@@ -30,12 +30,12 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     reviews() {
-      return REVIEWS;
+      return ALL_REVIEWS;
     },
   },
   Review: {
     __resolveReference(review) {
-      return REVIEWS.find((_) => _.id === review.id);
+      return ALL_REVIEWS.find((_) => _.id === review.id);
     },
     product(review) {
       return { __typename: "Product", id: review.productId };
