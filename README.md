@@ -26,6 +26,10 @@ Then you can read the schema using introspection and push to [Graph Manager](htt
 yarn push:schema
 ```
 
+## Multiple environments
+
+You can handle multiple environments/graph variants by appending the `--tag=<tag>` argument to the `push:schema` command.
+
 ## Known issues
 
 When running the implementing services, the following error is shown in the terminal:
