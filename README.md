@@ -36,4 +36,4 @@ When running the implementing services, the following error is shown in the term
 
 > It looks like you're running a federated schema and you've configured your service to report metrics to Apollo Graph Manager. You should only configure your Apollo gateway to report metrics to Apollo Graph Manager.
 
-I cannot find a way to fix this but it does not seem to affect the query execcution at all.
+I cannot find a way to fix this but it does not seem to affect the query execution at all.
