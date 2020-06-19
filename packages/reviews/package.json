@@ -1,0 +1,20 @@
+{
+  "name": "@graphql-manager-poc/reviews",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd index.ts --transpileOnly",
+    "push:schema": "npx apollo service:push --serviceURL=http://localhost:4002 --serviceName=Reviews --endpoint=http://localhost:4002"
+  },
+  "dependencies": {
+    "@apollo/federation": "^0.16.8",
+    "apollo-server": "^2.15.0",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.1.0"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.49",
+    "typescript": "^3.9.5"
+  }
+}
