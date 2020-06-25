@@ -45,6 +45,9 @@ const resolvers = {
 
 const server = new ApolloServer({
   schema: buildFederatedSchema([{ typeDefs, resolvers }]),
+  context: ({ req }) => {
+    console.log(req.headers);
+  },
 });
 
 server.listen(4002).then(({ url }) => {
