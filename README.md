@@ -30,6 +30,12 @@ yarn push:schema
 
 You can handle multiple environments/graph variants by appending the `--tag=<tag>` argument to the `push:schema` command.
 
+## Passing http 'Authorization' header
+
+Using the playground you can pass http headers to the gateway. The gateway will forward the 'Authorization' header on calls to implementing services. 
+
+You should see the headers logged to console by the reviews service.
+
 ## Known issues
 
 When running the implementing services, the following error is shown in the terminal:
